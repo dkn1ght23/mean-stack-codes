@@ -27,3 +27,6 @@ let y = undefined;
 console.log(typeof y); //undefined
 
 console.log(typeof alert);//alert() is a function
+
+
+

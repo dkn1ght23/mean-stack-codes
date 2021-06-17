@@ -17,3 +17,4 @@ console.log(typeof num); //Convert string to number
 let str1 = "123456xyz";
 let num1 = Number(str1);
 console.log(num1); //Can not convert string to number if there is at least one char, will show NaN
+

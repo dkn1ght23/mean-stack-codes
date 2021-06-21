@@ -68,3 +68,54 @@ arrayPrinter(mainArray);
 
 console.log(mainArray); //it will impact the sharer elements too
 
+
+///
+
+function MathCalculator(){
+
+    console.log(this);
+    console.log(typeof this);
+
+    this.add = function(a,b){
+        return a+b;
+    }
+    this.sub = function(a,b){
+        return a-b;
+    }
+    this.mul = function(a,b){
+        return a*b;
+    }
+    this.div = function(a,b){
+        return a/b;
+    }
+    this.mod = function(a,b){
+        return a%b;
+    }
+}
+
+let calculator = new MathCalculator();
+
+console.log(calculator.add(2,3));
+console.log(calculator.mul(2,3));
+
+//Prototype
+//ProtoType
+function  MathCalculator(){
+    this.FirstName = 'Mujammal';
+    this.LastName = 'Ahmed';
+    this.Age = 23;
+
+    let sum = function (a, b) { //this works as local variable so we need to do (i)
+        console.log(a+b);
+    }
+    this.sum = sum;  //(i)
+}
+
+MathCalculator.prototype.greet = function(){
+    console.log('Hello ${this.FirstName} ${this.LastName}, welcome onboard');
+}
+
+let calculator = new MathCalculator();
+calculator.greet();
+calculator.sum(2,3);
+

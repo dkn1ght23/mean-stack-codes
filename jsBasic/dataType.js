@@ -28,5 +28,12 @@ console.log(typeof y); //undefined
 
 console.log(typeof alert);//alert() is a function
 
+//String formatting
 
+let userName = "Mujammal Ahmed";
+let greeting = `Hello ${userName}, Welcome onboard`;
+console.log(greeting);
+
+let anotherGreeting = "Hello "+ userName + ", Welcome onboard 2";
+console.log(anotherGreeting);
 

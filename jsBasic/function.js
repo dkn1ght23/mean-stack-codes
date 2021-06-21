@@ -119,3 +119,31 @@ let calculator = new MathCalculator();
 calculator.greet();
 calculator.sum(2,3);
 
+//Syntactic sugar of class
+
+class User{
+    constructor(name) {
+        this.name = name;
+    }
+    sayHi(){
+        alert(this.name);
+    }
+}
+
+let user = new User('Mujammal Ahmed');
+
+console.log(user);
+console.log(typeof user);
+
+//Works same for the below code but using fucntion
+
+function User(name){
+    this.name = name;
+}
+
+User.prototype.sayHi = function(){
+    alert(this.name);
+}
+
+let user = new User('Mujammal');
+user.sayHi();

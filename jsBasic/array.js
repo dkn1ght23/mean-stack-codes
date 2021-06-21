@@ -21,3 +21,20 @@ console.log(val);
 
 val.push(...val2); //add another array like this
 console.log(val);
+
+//using filter
+
+let array = [1,2,3,37];
+
+let arr = array.filter(function (value, index) { //depends on condition
+    return index % 2 != 0;jhnb
+})
+
+console.log(arr);
+
+//use map
+
+let arr3 = array.map(function (value, index) { //always insert
+    return value *2;
+})
+console.log(arr3);
